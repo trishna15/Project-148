@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Evening Walk</title>
+
+    <meta name="description" content="Hello, WebVR! • A-Frame" />
+
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      
+      <a-assets>
+
+        <a-asset-item id="girl" src="./girl/scene.gltf"></a-asset-item>
+
+        <a-asset-item id="bench" src="./bench/scene.gltf"></a-asset-item>
+
+        <a-asset-item id="lamp" src="./lamp/scene.gltf"></a-asset-item>
+
+        <a-asset-item id="cat" src="./cat/scene.gltf"></a-asset-item>
+
+        
+      </a-assets>
+      <a-sky color="white"></a-sky>
+
+      <a-box
+        id="background-scene"
+        src="./images/sky.jpeg"
+        position="0 12.48 -3.5"
+        width="30"
+        height="25"
+      >
+      </a-box>
+
+        <a-plane
+        shadow="cast:true"
+          src="./images/street.jpg"
+          position="0 0 0" rotation="-90 0 0" width="30" height="10"
+        ></a-plane>
+
+        
+      <a-entity
+      scale="0.03 0.03 0.03"
+      gltf-model="#bench"
+      position="0 0 0"
+      shadow="cast:true;"
+      rotation="0 180 0"
+    ></a-entity>
+
+    
+    <a-entity
+      scale="2.5 2.5 2.5"
+      gltf-model="#lamp"
+      position="-8 0 1"
+      shadow="cast:true;"
+      rotation="0 230 0"
+    ></a-entity>
+
+   
+    <a-entity
+      scale="3 3 3"
+      gltf-model="#cat"
+      position="5 0 3"
+      rotation="0 70 0"
+      shadow="cast:true;"
+    ></a-entity>
+
+    
+    <a-entity
+      scale="5 5 5"
+      gltf-model="#girl"
+      position="-2 0 3"
+      shadow="cast:true;"
+      rotation="0 300 0"
+    ></a-entity>
+    
+
+    <a-camera look-controls-enabled wasd-controls-enabled position="0 6 15">
+    </a-camera>
+
+  
+  <a-entity light="type: ambient;"> 
+
+  </a-entity>
+
+    <a-entity
+        light="type: point; castShadow: true; color: #e6ca14; intensity: 2.5"
+        position="-8 8 1.5"
+      >
+    </a-entity>
+
+    </a-scene>
+
+    </body>
+    </html>
